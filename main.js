@@ -15,7 +15,7 @@ eventEmitter.on("connection", connectHandler);
 
 eventEmitter.on("data_received", function () {
     console.log("data received success!");
-})
+});
 
 eventEmitter.emit("connection");
 

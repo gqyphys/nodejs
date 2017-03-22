@@ -1,4 +1,6 @@
 var fs = require("fs");
+
+// readStream
 var data = "";
 
 var readStream = fs.createReadStream("input.txt");
@@ -18,6 +20,7 @@ readStream.on("error", function() {
 
 console.log("程序执行完毕");
 
+// writeStream
 var data2 = "This is a output file.";
 
 var writeStream = fs.createWriteStream("output.txt");

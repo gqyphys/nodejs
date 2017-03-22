@@ -22,7 +22,7 @@ var data2 = "This is a output file.";
 
 var writeStream = fs.createWriteStream("output.txt");
 
-writeStream.write(data,"UTF8");
+writeStream.write(data2,"UTF8");
 writeStream.end();
 
 writeStream.on("finish", function() {

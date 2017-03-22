@@ -1,7 +1,7 @@
 var fs = require("fs");
 var data = "";
 
-var readStream = fs.createReadSteam("input.txt");
+var readStream = fs.createReadStream("input.txt");
 readStream.setEncoding("UTF8");
 
 readStream.on("data", function(chunk) {

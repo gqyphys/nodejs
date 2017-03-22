@@ -5,3 +5,5 @@ http.creatSever(function(request, response) {
     response.write("Hello World");
     response.end();
 }).listen(8888);
+
+console.log('Server running at http://127.0.0.1:8888/');

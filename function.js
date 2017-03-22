@@ -1,7 +1,7 @@
-function execute(someFunction, value) {
-    someFunction(value);
-}
+var http = require("http");
 
-execute(function(word) {
-    console.log(word);
-}, "hello");
+http.creatSever(function(request, response) {
+    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.write("Hello World");
+    response.end();
+}).listen(8888);

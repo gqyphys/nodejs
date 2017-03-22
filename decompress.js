@@ -5,4 +5,4 @@ fs.createReadStream("input.txt.gz")
     .pipe(zlib.createGunzip())
     .pipe(fs.createWriteStream("decompress.txt"));
 
-console.log("文件压缩完成。");
+console.log("文件解压完成。");

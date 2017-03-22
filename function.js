@@ -1,6 +1,6 @@
 var http = require("http");
 
-http.creatSever(function(request, response) {
+http.createSever(function(request, response) {
     response.writeHead(200, {"Content-Type": "text/plain"});
     response.write("Hello World");
     response.end();

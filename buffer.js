@@ -1,4 +1,4 @@
-var buffer = new Buffer(256);
+var buffer = new Buffer(14);
 
 var len = buffer.write("www.kaoshixing.com");
 

@@ -1,12 +1,6 @@
-var buffer = new Buffer(14);
+var buff1 = new Buffer("www.");
+var buff2 = new Buffer("kaoshixing.com");
+var buff3 = Buffer.contact(buff1,buff2);
 
-var len = buffer.write("www.kaoshixing.com");
 
-console.log("write length:" + len);
-
-console.log(buffer.toString('ascii'));
-console.log(buffer.toString('ascii',0,3));
-console.log(buffer.toString('utf8',0,4));
-console.log(buffer.toString(undefined,0,5));
-
-console.log(buffer.toJSON(buffer));
+console.log("write:" + buff3);

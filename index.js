@@ -5,16 +5,16 @@ var server = require("./curl");
 var url = 'http://news.163.com/';
 
 server.download(url, function(data) {
-  if (data) {
-    console.log(data);
+    if (data) {
+        console.log(data);
 
-    var $ = cheerio.load(data);
-    $("a").each(function(i, e) {
-        console.log($(e).attr("href"));
-    });
+        var $ = cheerio.load(data);
+        $("a").each(function(i, e) {
+            console.log($(e).attr("href"));
+        });
 
-    console.log("done");
-  } else {
-      console.log("error");
-  }
+        console.log("done");
+    } else {
+        console.log("error");
+    }
 });

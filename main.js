@@ -14,7 +14,7 @@ var eventEmitter = new events.EventEmitter();
 var connectHandler = function connectd() {
     console.log("connect success!");
     eventEmitter.emit("data_received");
-}
+};
 
 eventEmitter.on("connection", connectHandler);
 

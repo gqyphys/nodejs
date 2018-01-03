@@ -1,20 +1,10 @@
-var http = require("http");
-var url = require("url");
+var http = require('http');
+var server = http.createServer();
 
-function start() {
-	function onRequest(request, response) {
-		var pathname = url.parse(request.url).pathname;
-		console.log("Request for " + pathname + " received.");
+server.on('request', function (req, res) {
+	res.writeHead(200, {'Content-Type': 'text/plain'});
+	res.end('Hello World\n');
+});
 
-		route(pathname);
-		
-		response.writeHead(200, {"Content-Type": "text/plain"});
-	    response.write("Hello World");
-	    response.end();
-	}
-
-	http.createServer(onRequest).listen(8888);
-	console.log("Server has started.");
-}
-
-exports.start = start;
+server.listen(3000);
+console.log('Server running at http://localhost:3000/');
